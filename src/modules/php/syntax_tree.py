@@ -31,6 +31,6 @@ class SyntaxTree(phpast.Node):
 
 def build_syntax_tree(file_path, debug=False):
     if not os.path.isfile(file_path):
-        raise Exception("Please specify a File Path")
+        raise Exception(f"Please specify a File Path, you specify path {file_path}")
     file_handle = open(file_path)
     return SyntaxTree(file_handle)
