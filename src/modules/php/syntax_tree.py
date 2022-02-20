@@ -1,6 +1,13 @@
 import sys
 import os
 
+import sys
+
+new_path = os.path.normpath(
+    os.path.join(os.path.dirname(__file__), "..", "..", "..")
+)
+sys.path.append(new_path)
+
 from src.compiler.php import phpparse
 from src.compiler.php import phplex
 from src.compiler.php import phpast
